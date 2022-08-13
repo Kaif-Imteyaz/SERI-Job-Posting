@@ -37,6 +37,48 @@
 
 </head>
 <body>
+  <section id="nav">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+      
+        <a href="/index.html">
+          <span id="back" class="material-symbols-outlined">
+            arrow_back
+            </span>
+          </a>
+    
+        <a class="nav navbar-brand" href="">SERI</a>
+       
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="sign nav-link btn btn-outline-light" href="#">Sign-up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  
+
   <h2>Login Page</h2><br>  
   
   <form id="login" method="get" action="login.php">    
@@ -46,16 +88,28 @@
       
       <label><strong>Password </strong>   </label> 
       <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+      <br>
+      <input type="checkbox" id="check">
+      <span>Remember me</span>  
+      <br> <br>
+
+
+      <a href="#" class="forget">Forgot Password?</a>
+
+
+      <label>New to SERI?</label>
+      <a href="" class="Signup" >Signup</a>
+      
+      <br> <br>
+     
+      <a href="#" class="log btn btn-outline-dark active" role="button" aria-pressed="true">LOGIN</a>      
       <br><br>    
 
-      <a href="#" class="btn btn-outline-dark active" role="button" aria-pressed="true">LOGIN</a>      
-      <br><br>    
-
-      <input type="checkbox" id="check">    
-      <span>Remember me</span>    
+         
+        
       <br><br> 
 
-       <a href="#">Forgot Password</a>    
+        
   </form>     
 
 </body>
