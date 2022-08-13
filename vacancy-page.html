@@ -7,6 +7,7 @@
     <title>Admin Sign-up</title>
 
    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!--Bootstrap-css-->
     <link
@@ -15,8 +16,9 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/Sign/sign.css"/>
+    <link rel="stylesheet" href="/Sign/vacancy.css"/>
 
+    <!--Icons-->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -24,6 +26,8 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
     <!--Bootstrap-js-->
      <script
@@ -35,53 +39,60 @@
 </head>
 <body>
        
-  <nav class="navbar navbar-expand-lg " style="background-color: #E2DCC8;">
-    <div class="container-fluid">
-
-     <a href="/index.html" id="back" ><i class="fa-regular fa-circle-left"></i></a>
-
-     <a class="navbar-brand" href="/index.html" id="top">SERI Sign-up</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+<!--Navbar-->
+<section id="nav">
+  <div class="container-fluid">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    
+      <a href="/index.html">
+        <span id="back" class="material-symbols-outlined">
+          arrow_back
+          </span>
+        </a>
+  
+      <a class="nav navbar-brand" href="">SERI</a>
+     
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            <a class="nav-link" href="#footer">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">about</a>
+            <a class="nav-link" href="#">About Us</a>
           </li>
-        
-        </form>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+</section>
 
  <div class="box"> 
-  <h1>Sign-up</h1>
+  <h3>Enter the following details related to the vacancy.</h3>
+
       <div class="container">
-  <!--Sign-up Form-->
-    <form action=" " class="sign-up">
-        <p>
-        <label for="faculty">Faculty: </label>
-          <input type="text" id="faculty" name="faculty"  placeholder="Faculty Name" required />
-           <br>
-          </p> 
+      <!--Vacancy Form-->
+       <form action=" " class="sign-up">
 
-           <p>
-           <label for="email">E-mail: </label>
-           <input type="email" id="email"   placeholder="admin@email.com" required/> 
-            <br>
-          </p>
-           
-     <!--Affliated institute = affl -->
-
-           
+              <!--Affliated institute = affl -->
            <div class="autocomplete">
             <p>
             <label for="affliated-institute">Affliated <br> Institute:  </label>
-            <input id="myInput" type="text" name="affliated" placeholder="Please select your institute">
+            <input id="myInput" type="text" name="affliated" placeholder="Please select your inst...">
             </p>
         <script>
             function autocomplete(inp, arr) {
@@ -187,8 +198,20 @@
             autocomplete(document.getElementById("myInput"), affliated);
             </script>
       </div>
-        
-            <p>
+
+      <p>
+        <label for="faculty">Tittle: </label>
+          <input type="text" id="tittle" name="tittle" placeholder="Tittle" required />
+           <br>
+          </p> 
+
+        <p>
+        <label for="faculty">Location: </label>
+          <input type="text" id="location" name="location" placeholder="Enter location" required />
+           <br>
+          </p> 
+
+          <p>
             <label for="position">Position: </label>
             <input type="radio" id="position" name="position" required />
             Full Time RA
@@ -196,20 +219,27 @@
             Intern  
             <br>
           </p>
-          
-          
+
+            
          <p>
-            <label for="stripend">Stripend:</label>
-            <input type="text" id="stripend" name="stripend" required placeholder="stripend"/>
+          <label for="stripend">Stripend:</label>
+          <input type="text" id="stripend" name="stripend" required placeholder="stripend"/>
+          <br>
+        </p>
+
+        <p>
+          <label for="skill-set">Skill-set:</label>
+          <input type="text" id="skill-set" name="skill" required placeholder="skill-set"/> 
+          <br>
+         </p>
+
+           <p>
+           <label for="link">Link: </label>
+           <input type="url" id="link"   placeholder="If institute link is available" required/> 
             <br>
           </p>
-
-          <p>
-           <label for="skill-set">Skill-set:</label>
-           <input type="text" id="skill-set" name="skill" required placeholder="skill-set"/> 
-           <br>
-          </p>
-
+       
+       
           <p>
             <label for="project">
               <em>Please provide a detailed information about your project</em>
@@ -228,7 +258,8 @@
            <br>  
                 
            <!--Submit button-->
-                
+          </div> 
+           
            <div class="sub">
           <a href="#" id="btn" class="btn btn-outline-dark btn-lg active" 
           role="button" aria-pressed="true">SUBMIT</a>
@@ -236,18 +267,19 @@
         </form>
       </div>
 
-      <div class="side-bar">
-               <p>
-                Are you a existng user?
-               </p>
-              <a href="#" >Login</a>
-              <hr>
-              <p>
-                Drop your social media handles
-              </p>
-              <a href="#" >Here</a>
-      </div>
- </div>
+    
+  <!--Footer-->
+  <footer id="footer">      
+    <a class=" social-icon fa-brands fa-facebook btn btn-outline-secondary  btn-block" href=" " ></a> 
+
+    <a class="social-icon fa-brands fa-twitter btn btn-outline-secondary btn-block" href=" "> </a>
+
+    <a class="social-icon fa-brands fa-instagram btn btn-outline-secondary btn-block" href=" "></a>
+    
+    <a class="social-icon fa-solid fa-envelope btn btn-outline-secondary btn-block" href=" "></a>
+
+    <p>© SERI 2022. All rights are reserved.</p>
+</footer>
 
 </body>
 </html>
