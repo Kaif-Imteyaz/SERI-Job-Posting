@@ -1,0 +1,79 @@
+
+
+/*Navbar*/
+
+#nav{
+    background-color: #7F8487;
+}
+
+
+/*Body*/
+body{
+   background-color:#E4DCCF;
+}
+
+/*Top-Head*/
+.Top-head{
+    color: #576F72;
+    padding-top: 7%;
+    padding-left: 1%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+/*Job Search*/
+
+.jobSearch{
+    text-align: center;
+    margin: 1.5rem;
+}
+
+
+/*Container*/
+.row{
+    padding-left: 100px;;
+}
+
+ .row::after {
+    content: none;
+    clear: both;
+    display: table;
+  } 
+
+.A{
+    border: solid #7F8487;
+    border-radius: thin;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#TOC{
+    color: #7F8487;
+}
+
+#TOC-str{
+    float: right;
+    margin-left: 2rem;
+}
+
+/*btm-btn*/
+.log{
+    padding-left: 12rem;
+    display: inline-block;
+}
+.hire{
+    float: right;
+    margin-right: 12.5rem;
+}
+
+/*Footer*/
+.foot{
+    padding: 4%;
+    text-align: center;
+    background-color: #7F8487;
+
+}
+.rights{
+    padding: 1%;
+}
