@@ -16,7 +16,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/Sign/vacancy.css"/>
+    <link rel="stylesheet" href="vacancy.css"/>
 
     <!--Icons-->
     <link
@@ -81,7 +81,7 @@
   </div>
 </section>
 
- <div class="box"> 
+<div class="box"> 
   <h3>Enter the following details related to the vacancy.</h3>
 
       <div class="container">
@@ -92,7 +92,7 @@
            <div class="autocomplete">
             <p>
             <label for="affliated-institute">Affliated <br> Institute:  </label>
-            <input id="myInput" type="text" name="affliated" placeholder="Please select your inst...">
+            <input id="Institute" type="text" name="affliated" placeholder="Please select your inst...">
             </p>
         <script>
             function autocomplete(inp, arr) {
@@ -199,43 +199,48 @@
             </script>
       </div>
 
+
+
+
+ 
+
       <p>
-        <label for="faculty">Tittle: </label>
-          <input type="text" id="tittle" name="tittle" placeholder="Tittle" required />
+        <label for="faculty">Title: </label>
+          <input type="text" id="Title" name="tittle" placeholder="Tittle" required />
            <br>
           </p> 
 
         <p>
         <label for="faculty">Location: </label>
-          <input type="text" id="location" name="location" placeholder="Enter location" required />
+          <input type="text" id="Location" name="location" placeholder="Enter location" required />
            <br>
           </p> 
 
           <p>
             <label for="position">Position: </label>
-            <input type="radio" id="position" name="position" required />
+            <input type="radio" id="Position" name="position" value="Full Time RA" required />
             Full Time RA
-            <input type="radio" id="position" name="position" required />
+            <input type="radio" id="Position" name="position" value="Intern" required />
             Intern  
             <br>
           </p>
 
             
          <p>
-          <label for="stripend">Stripend:</label>
-          <input type="text" id="stripend" name="stripend" required placeholder="stripend"/>
+          <label for="stripend">Stipend:</label>
+          <input type="text" id="Stipend" name="stipend" required placeholder="stripend"/>
           <br>
         </p>
 
         <p>
           <label for="skill-set">Skill-set:</label>
-          <input type="text" id="skill-set" name="skill" required placeholder="skill-set"/> 
+          <input type="text" id="SkillSet" name="skill" required placeholder="skill-set"/> 
           <br>
          </p>
 
            <p>
            <label for="link">Link: </label>
-           <input type="url" id="link"   placeholder="If institute link is available" required/> 
+           <input type="url" id="Link"   placeholder="If institute link is available" required/> 
             <br>
           </p>
        
@@ -245,7 +250,7 @@
               <em>Please provide a detailed information about your project</em>
             </label>
             <br>
-            <textarea name="project" id="project-details" cols="45" rows="5"
+            <textarea name="project" id="Details" cols="45" rows="5"
              required placeholder="Enter your text here"></textarea>
             <br>
            </p>
@@ -261,11 +266,75 @@
           </div> 
            
            <div class="sub">
-          <a href="#" id="btn" class="btn btn-outline-dark btn-lg active" 
-          role="button" aria-pressed="true">SUBMIT</a>
+          <button id="Submit">Submit<button>
            </div>
         </form>
       </div>
+
+
+      <!-- FIREbase conf -->
+
+
+      <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+      
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBjhNKgyqqMRJzACLySHAS7b6b0VDoXfic",
+          authDomain: "seri-876dd.firebaseapp.com",
+          databaseURL: "https://seri-876dd-default-rtdb.firebaseio.com",
+          projectId: "seri-876dd",
+          storageBucket: "seri-876dd.appspot.com",
+          messagingSenderId: "598997278675",
+          appId: "1:598997278675:web:dc162aaa0fd7e710c45926"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import {getDatabase , ref , set , child} 
+        from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+
+        const db = getDatabase();
+
+        // Refrences
+
+        var Institute = document.getElementById("Institute");
+        var Title = document.getElementById("Title");
+        var Location = document.getElementById("Location");
+        var Position = document.getElementById("Position");
+        var Stipend = document.getElementById("Stipend");
+        var SkillSet = document.getElementById("SkillSet");
+        var Link = document.getElementById("Link");
+        var Details = document.getElementById("Details");
+
+        var SubmitButton = document.getElementById("Submit");
+
+
+        // Insert Function
+
+        function InsertData(){
+          set(ref(db ,  "Listings/" + Title.value),{
+          Institute : Institute.value,
+          Title : Title.value,
+          Location : Location.value,
+          Position : Position.value,
+          Stipend : Stipend.value,
+          SkillSet : SkillSet.value,
+          Link : Link.value,
+          Details : Details.value
+        })
+        .then(()=>{
+          alert("data Stored Successfully");
+        }).catch((error)=>{
+          alert(error);
+        });  }
+
+        // Submitting Functionality
+
+        SubmitButton.addEventListener('click',InsertData);
+        </script>
 
     
   <!--Footer-->
