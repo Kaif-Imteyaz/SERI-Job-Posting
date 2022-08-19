@@ -32,7 +32,7 @@ body{
 
 /*Container*/
 .row{
-    padding-left: 100px;;
+    padding-left: 100px;
 }
 
  .row::after {
@@ -77,3 +77,36 @@ body{
 .rights{
     padding: 1%;
 }
+.navigation ul li{
+    margin: 20px;
+    color: white;
+    font-family: Roman;
+  }.boxes{
+    border: 5px solid white;
+    width: 1000px;
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;   
+    justify-content: flex-end; 
+    box-shadow: 0 0 10px silver;
+    transition: 300ms all;
+    background-size: cover;
+    background-position: center;
+    background-color: #7F8487; 
+  }
+  .box-content{
+    background-color: white;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    transition: 300ms all;
+  }
+  .boxes:hover {
+    transform: scale(1.1);
+  }
+  .boxes:hover .box-content{
+    background-color: transparent;
+    color: white;
+  }
