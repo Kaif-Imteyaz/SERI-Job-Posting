@@ -1,78 +1,133 @@
 
+
 /*Navbar*/
 #nav{
-    background-color: #7F8487;
-  }
-  
+  background-color: #7F8487;
+}
+
 #back{
-    color: #fff;
-  }
-  
+  color: #fff;
+}
+
 .nav{
-    margin-left: 8px;
-  }
+  margin-left: 8px;
+}
 
 .sign{
-    font-family: Georgia;
-    color: #ffffff;
-    font-size: 18px;
-    background: #7F8487;
-    padding: 8px 20px 8px 20px;
-    text-decoration: none;
-  }
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 18px;
+  background: #7F8487;
+  padding: 8px 20px 8px 20px;
+  text-decoration: none;
+}
 
 .sign:hover{
-    background-color: #545c61;
-  }
+  background-color: #545c61;
+}
 
 body{
-    text-align: center;
-
 /* padding: 15% 15%; */
-    background-image: linear-gradient(to bottom, #E4DCCF, rgba(198, 222, 241, 0.5));
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    
-    background-size: 100% 100%;
-    background-blend-mode: normal;
+  background-image: linear-gradient(to bottom, #E4DCCF, rgba(198, 222, 241, 0.5));
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  
+  background-size: 100% 100%;
+  background-blend-mode: normal;
 }
 
-h2{
-    padding: 3%
+.side-info{
+  font-size: large;
+  padding: 14% 7% 0% 7%;
 }
-
-.login-form{
-    width: 500px;
-    margin-left: 150px;
-
-}
-.forget{
-    margin-right: 20px;
+#login-form{
+  margin-top: 5%;
 }
 
 #login{
-    text-align: center;
-    
+  padding-top: 18%;
+  padding-left: 30%;
+
+  border: 1px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
- 
+
+.forgot{
+  margin-left: 12%;
+}
+hr{
+  width: 60%;
+}
 .log {
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    font-family: Georgia;
-    color: #ffffff;
-    font-size: 18px;
-    background: #000000;
-    padding: 8px 20px 8px 20px;
-    text-decoration: none;
-  }
-  
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 18px;
+  background: #6f6d6d;
+  padding: 8px 20px 8px 20px;
+  text-decoration: none;
+  margin-left: 15%;
+}
+
 .log:hover {
-    background: #545c61;
-    background-image: -webkit-linear-gradient(top, #545c61, #707070);
-    background-image: -moz-linear-gradient(top, #545c61, #707070);
-    background-image: -ms-linear-gradient(top, #545c61, #707070);
-    background-image: -o-linear-gradient(top, #545c61, #707070);
-    background-image: linear-gradient(to bottom, #545c61, #707070);
-    text-decoration: none;
-  } 
+  background: #545c61;
+  background-image: -webkit-linear-gradient(top, #545c61, #707070);
+  background-image: -moz-linear-gradient(top, #545c61, #707070);
+  background-image: -ms-linear-gradient(top, #545c61, #707070);
+  background-image: -o-linear-gradient(top, #545c61, #707070);
+  background-image: linear-gradient(to bottom, #545c61, #707070);
+  text-decoration: none;
+} 
+
+.create{
+  margin-left: 10%;
+}
+
+
+/*Footer*/
+.foot{
+  margin-top: 15%;
+  padding: 4%;
+  text-align: center;
+  background-color: #7F8487;
+
+}
+.rights{
+  padding: 1%;
+}
+.navigation ul li{
+  margin: 20px;
+  color: white;
+  font-family: Roman;
+}.boxes{
+  border: 5px solid white;
+  width: 1000px;
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;   
+  justify-content: flex-end; 
+  box-shadow: 0 0 10px silver;
+  transition: 300ms all;
+  background-size: cover;
+  background-position: center;
+  background-color: #7F8487; 
+}
+.box-content{
+  background-color: white;
+  padding: 10px 20px;
+  text-align: left;
+  width: 100%;
+  transition: 300ms all;
+}
+.boxes:hover {
+  transform: scale(1.1);
+}
+.boxes:hover .box-content{
+  background-color: transparent;
+  color: white;
+}
