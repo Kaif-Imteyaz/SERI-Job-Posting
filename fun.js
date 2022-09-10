@@ -35,7 +35,8 @@ function getDataSnapShot() {
 
             console.log(DataSnapshot);
             // console.log(DataSnapshot.tataya.Link);
-            console.log(data)
+            console.log(data);
+            console.log("dataIsHere");
             
         
 
