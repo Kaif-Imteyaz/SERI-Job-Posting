@@ -1,9 +1,3 @@
-*{
-    box-sizing: border-box;
-}
-
-
-
 
 /*Navbar*/
 #nav{
@@ -19,85 +13,130 @@
 }
 
 /*Body*/
+
 body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color:#E4DCCF;
+  background-image: linear-gradient(to bottom, #E4DCCF, rgba(198, 222, 241, 0.5));
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  
+  background-size: 100% 100%;
+  background-blend-mode: normal;
 }
+/*Top-head*/
 
-
-h3{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding: 4%;
+.head{
+  padding-top: 3%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
 }
 
-.autocomplete-items {
-    position: relative;
-    border: 1px solid #7F8487;
-    border-bottom: none;
-    border-top: none;
-    z-index: 99;
-    /*position the autocomplete items to be the same width as the container:*/
-    top: 100%;
-    left: 0;
-    right: 0;
-  }
-  
-  .autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #fff; 
-    border-bottom: 1px solid #d4d4d4; 
-    width: 40%;
-    margin-left: 26%;
-  }
-  
-  /*when hovering an item:*/
-  .autocomplete-items div:hover {
-    background-color:  #7F8487;;
-    
-  }
-  
-  /*when navigating through the items using the arrow keys:*/
-  .autocomplete-active {
-    background-color:#7F8487 !important;
-
-  }
 
 
+/*Vacancy-form*/
+#vacancy-form{
+  padding-left: 3px;
+}
 
-.container{
-  padding-top: 0;
-  display: inline-block;
-  margin-left: 25rem;
+#vacancy{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 3%;
+}
 
+p{
+  margin-left: 28%;
+}
+
+input{
+  width: 60%;
+}
+
+input[type="radio"]{
+  width: 20px;
 }
 
 
-label{
-  text-align: left;
-  /* margin-left: 25rem; */
-
-}
-
-/* #project-details{
-  margin-left: 15%;
-  
-} */
 
 #condition{
-  /* margin-left: 15%; */
-  color: red;
+margin-left: 26%;
 }
-.sub{
+
+#terms{
+    display: inline-block;
+    width: 5%;
+    margin-left: 26%;
+  }
+
+  #tNc{
+margin-left: 32%;
+  }
+
+/* .social{
   
+    border: 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+} */
+
+#submit{
+  margin-left: 27% ;
+}
+
+
+
+/*Terms*/
+#terms{
+  display: inline-block;
+  width: 5%;
+}
+
+
+/*Footer*/
+.foot{
+  margin-top: 15%;
+  padding: 4%;
   text-align: center;
-  padding-top: 5px;
-  margin-bottom: 10%;
+  background-color: #7F8487;
+
 }
-
-
-#footer{
-    text-align: center;
-  
+.rights{
+  padding: 1%;
+}
+.navigation ul li{
+  margin: 20px;
+  color: white;
+  font-family: Roman;
+}.boxes{
+  border: 5px solid white;
+  width: 1000px;
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;   
+  justify-content: flex-end; 
+  box-shadow: 0 0 10px silver;
+  transition: 300ms all;
+  background-size: cover;
+  background-position: center;
+  background-color: #7F8487; 
+}
+.box-content{
+  background-color: white;
+  padding: 10px 20px;
+  text-align: left;
+  width: 100%;
+  transition: 300ms all;
+}
+.boxes:hover {
+  transform: scale(1.1);
+}
+.boxes:hover .box-content{
+  background-color: transparent;
+  color: white;
 }
