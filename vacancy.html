@@ -227,6 +227,66 @@
 
     </div>
 
+    <!-- Firebase confif -->
+  <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBjhNKgyqqMRJzACLySHAS7b6b0VDoXfic",
+          authDomain: "seri-876dd.firebaseapp.com",
+          databaseURL: "https://seri-876dd-default-rtdb.firebaseio.com",
+          projectId: "seri-876dd",
+          storageBucket: "seri-876dd.appspot.com",
+          messagingSenderId: "598997278675",
+          appId: "1:598997278675:web:dc162aaa0fd7e710c45926"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import {getDatabase , ref , set , child} 
+        from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+
+        const db = getDatabase();
+
+        // Refrences
+        var Institute = document.getElementById("Institute");
+        var Title = document.getElementById("Title");
+        var Location = document.getElementById("Location");
+        var Position = document.getElementById("Position");
+        var Stipend = document.getElementById("Stipend");
+        var SkillSet = document.getElementById("SkillSet");
+        var Link = document.getElementById("Link");
+        var Details = document.getElementById("Details");
+
+        var SubmitButton = document.getElementById("Submit");
+
+
+        // Insert Function
+
+        function InsertData(){
+          set(ref(db ,  "Listings/" + Title.value),{
+          Institute : Institute.value,
+          Title : Title.value,
+          Location : Location.value,
+          Position : Position.value,
+          Stipend : Stipend.value,
+          SkillSet : SkillSet.value,
+          Link : Link.value,
+          Details : Details.value
+        })
+        .then(()=>{
+          alert("data Stored Successfully");
+        }).catch((error)=>{
+          alert(error);
+        });  }
+
+        // Submitting Functionality
+
+        SubmitButton.addEventListener('click',InsertData);
+        </script>
 
 
 
