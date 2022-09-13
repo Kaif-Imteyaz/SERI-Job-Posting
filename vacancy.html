@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Intern</title>
+    <title>vacancy</title>
 
-   
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    
     <!--Bootstrap-css-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -16,7 +14,8 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="vacancy.css"/>
+   
+    <link rel="stylesheet" href="/vacancy.css">
 
     <!--Icons-->
     <link
@@ -35,320 +34,215 @@
      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
      crossorigin="anonymous"
    ></script>
-     
+
+   <script src="/vacancy.js">
+    </script>
 </head>
+
 <body>
-       
-<!--Navbar-->
-<section id="nav">
-  <div class="container-fluid">
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+  <section id="nav">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+      
+        <a href="/index.html">
+          <span id="back" class="material-symbols-outlined">
+            arrow_back
+            </span>
+          </a>
     
-      <a href="/index.html">
-        <span id="back" class="material-symbols-outlined">
-          arrow_back
-          </span>
-        </a>
+        <a class="nav navbar-brand" href="/index.html">SERI</a>
+       
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="sign nav-link btn btn-outline-light" href="/signup.html">Sign-up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
   
-      <a class="nav navbar-brand" href="">SERI</a>
-     
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#footer">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<div class="box"> 
-  <h3>Enter the following details related to the vacancy.</h3>
-
-      <div class="container">
-      <!--Vacancy Form-->
-       <form action=" " class="sign-up">
-
-              <!--Affliated institute = affl -->
-           <div class="autocomplete">
-            <p>
-            <label for="affliated-institute">Affliated <br> Institute:  </label>
-            <input id="Institute" type="text" name="affliated" placeholder="Please select your inst...">
-            </p>
-        <script>
-            function autocomplete(inp, arr) {
-              /*the autocomplete function takes two arguments,
-              the text field element and an array of possible autocompleted values:*/
-              var currentFocus;
-              /*execute a function when someone writes in the text field:*/
-              inp.addEventListener("input", function(e) {
-                  var a, b, i, val = this.value;
-                  /*close any already open lists of autocompleted values*/
-                  closeAllLists();
-                  if (!val) { return false;}
-                  currentFocus = -1;
-                  /*create a DIV element that will contain the items (values):*/
-                  a = document.createElement("DIV");
-                  a.setAttribute("id", this.id + "autocomplete-list");
-                  a.setAttribute("class", "autocomplete-items");
-                  /*append the DIV element as a child of the autocomplete container:*/
-                  this.parentNode.appendChild(a);
-                  /*for each item in the array...*/
-                  for (i = 0; i < arr.length; i++) {
-                    /*check if the item starts with the same letters as the text field value:*/
-                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                      /*create a DIV element for each matching element:*/
-                      b = document.createElement("DIV");
-                      /*make the matching letters bold:*/
-                      b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                      b.innerHTML += arr[i].substr(val.length);
-                      /*insert a input field that will hold the current array item's value:*/
-                      b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                      /*execute a function when someone clicks on the item value (DIV element):*/
-                      b.addEventListener("click", function(e) {
-                          /*insert the value for the autocomplete text field:*/
-                          inp.value = this.getElementsByTagName("input")[0].value;
-                          /*close the list of autocompleted values,
-                          (or any other open lists of autocompleted values:*/
-                          closeAllLists();
-                      });
-                      a.appendChild(b);
-                    }
-                  }
-              });
-              /*execute a function presses a key on the keyboard:*/
-              inp.addEventListener("keydown", function(e) {
-                  var x = document.getElementById(this.id + "autocomplete-list");
-                  if (x) x = x.getElementsByTagName("div");
-                  if (e.keyCode == 40) {
-                    /*If the arrow DOWN key is pressed,
-                    increase the currentFocus variable:*/
-                    currentFocus++;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                  } else if (e.keyCode == 38) { //up
-                    /*If the arrow UP key is pressed,
-                    decrease the currentFocus variable:*/
-                    currentFocus--;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                  } else if (e.keyCode == 13) {
-                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
-                    e.preventDefault();
-                    if (currentFocus > -1) {
-                      /*and simulate a click on the "active" item:*/
-                      if (x) x[currentFocus].click();
-                    }
-                  }
-              });
-              function addActive(x) {
-                /*a function to classify an item as "active":*/
-                if (!x) return false;
-                /*start by removing the "active" class on all items:*/
-                removeActive(x);
-                if (currentFocus >= x.length) currentFocus = 0;
-                if (currentFocus < 0) currentFocus = (x.length - 1);
-                /*add class "autocomplete-active":*/
-                x[currentFocus].classList.add("autocomplete-active");
-              }
-              function removeActive(x) {
-                /*a function to remove the "active" class from all autocomplete items:*/
-                for (var i = 0; i < x.length; i++) {
-                  x[i].classList.remove("autocomplete-active");
-                }
-              }
-              function closeAllLists(elmnt) {
-                /*close all autocomplete lists in the document,
-                except the one passed as an argument:*/
-                var x = document.getElementsByClassName("autocomplete-items");
-                for (var i = 0; i < x.length; i++) {
-                  if (elmnt != x[i] && elmnt != inp) {
-                    x[i].parentNode.removeChild(x[i]);
-                  }
-                }
-              }
-              /*execute a function when someone clicks in the document:*/
-              document.addEventListener("click", function (e) {
-                  closeAllLists(e.target);
-              });
-            }
-            
-            /*An array containing all the country names in the world:*/
-            var affliated = ["AMU", "JMI", "Du"]
-            /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-            autocomplete(document.getElementById("myInput"), affliated);
-            </script>
-      </div>
 
 
+<!--Form -->
+
+<div class="row" >
+
+<div class="head">
+  
+  <h2>You are one step away from hiring</h2>
+
+</div>
 
 
- 
+  <div id="vacancy-form" class="autocomplete col-lg-12">
+     <form id="vacancy" method="get" action="">    
 
       <p>
-        <label for="faculty">Title: </label>
-          <input type="text" id="Title" name="tittle" placeholder="Title" required />
-           <br>
-          </p> 
+      
+        <strong>Institute</strong>
+      <br>
+      <input type="text" name="Institute" id="institute" 
+      placeholder="Select Institute" required>    
+       <br>
+    </p>
+      
+     <p>
+        <strong>Title</strong>
+      <br>
+        <input type="text" id="Title" name="title" placeholder="Title" required>
+         <br>
+        </p> 
+
+      <p>
+        
+          <strong>Location</strong>
+
+        <br>
+        <input type="text" id="Location" name="location" 
+        placeholder="Enter location" required>
+         <br>
+        </p> 
 
         <p>
-        <label for="faculty">Location: </label>
-          <input type="text" id="Location" name="location" placeholder="Enter location" required />
-           <br>
-          </p> 
-
-          <p>
-            <label for="position">Position: </label>
-            <input type="radio" id="Position" name="position" value="Full Time RA" required />
-            Full Time RA
-            <input type="radio" id="Position" name="position" value="Intern" required />
-            Intern  
-            <br>
-          </p>
-
-            
-         <p>
-          <label for="stripend">Stipend:</label>
-          <input type="text" id="Stipend" name="stipend" required placeholder="stripend"/>
+          
+            <strong>Position</strong>
+  
+          <br>
+          <input type="radio" id="Position" name="position" value="Full Time RA" 
+          required>
+          Full Time RA
+          <input type="radio" id="Position" name="position" value="Intern" 
+          required>
+          Intern  
           <br>
         </p>
 
+          
+       <p>
+        
+          <strong>Stipend</strong>
+
+        <br>
+        <input type="text" id="Stipend" name="Stipend" placeholder="Stripend" required>
+        <br>
+      </p>
+
+      <p>
+        
+          <strong>Skill Set</strong>
+
+        <br>
+        <input type="text" id="SkillSet" name="Skill" placeholder="Skill-set" required> 
+        <br>
+       </p>
+
+         <p>
+          
+            <strong>Institute link</strong>
+  
+          <br>
+         <input type="url" id="Link"   placeholder="If institute link is available" required> 
+          <br>
+        </p>
+     
+     
         <p>
-          <label for="skill-set">Skill-set:</label>
-          <input type="text" id="SkillSet" name="skill" required placeholder="skill-set"/> 
+          
+            <strong>Project</strong>
+  
+          <br>
+            <em>Please provide a detailed information about your project</em>
+          </label>
+          <br>
+          <textarea name="project" id="Details" cols="45" rows="5"
+           placeholder="Enter your text here"></textarea>
           <br>
          </p>
 
-           <p>
-           <label for="link">Link: </label>
-           <input type="url" id="Link"   placeholder="If institute link is available" required/> 
-            <br>
-          </p>
+         
+         <em id="condition"> *All fields are mandatory </em>   
+         <br>  
+              
+         <!--Submit button-->
+         
+        
+         <input type="checkbox" name="terms" id="terms"
+       onchange="activateButton(this)" required>  
+        By clicking here, I state that I have  read and understood the <br>
+        <a href="#" id="tNc">terms and conditions.</a>
+       <br><br>
        
-       
-          <p>
-            <label for="project">
-              <em>Please provide a detailed information about your project</em>
-            </label>
-            <br>
-            <textarea name="project" id="Details" cols="45" rows="5"
-             required placeholder="Enter your text here"></textarea>
-            <br>
-           </p>
-
-          
-           
-
-           
-           <em id="condition"> *All fields are mandatory </em>   
-           <br>  
-                
-           <!--Submit button-->
-          </div> 
-           
-           <div class="sub">
-          <button id="Submit">Submit<button>
-           </div>
-        </form>
-      </div>
+         <input type="submit" name="formSubmit" id="submit" 
+         class="create btn btn-outline-secondary active" 
+      role="button" aria-pressed="true" value="SUBMIT"/>  
+      <br><br> 
+      </form>
+    </div>
 
 
-      <!-- FIREbase conf -->
+
+    <!-- Social links -->
+    <!-- <div class="social col-lg-4" >
+      Drop your socials to let others know about you.
+     <br>
+     <br>
+      <form>
+        <p>
+          E-mail address:
+        <input type="email" placeholder="E-mail Address" required >
+        </p>
+        <p>
+          Twitter: <br>
+        <input type="text" placeholder="User_name/url">
+      </p>
+
+        <p>
+          LinkedIn: <br>
+        <input type="text" placeholder="Linkedin_UserName/url">
+      </p> -->
+      </form>
+
+    </div>
 
 
-      <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
-      
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyBjhNKgyqqMRJzACLySHAS7b6b0VDoXfic",
-          authDomain: "seri-876dd.firebaseapp.com",
-          databaseURL: "https://seri-876dd-default-rtdb.firebaseio.com",
-          projectId: "seri-876dd",
-          storageBucket: "seri-876dd.appspot.com",
-          messagingSenderId: "598997278675",
-          appId: "1:598997278675:web:dc162aaa0fd7e710c45926"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-
-        import {getDatabase , ref , set , child} 
-        from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
-
-        const db = getDatabase();
-
-        // Refrences
-
-        var Institute = document.getElementById("Institute");
-        var Title = document.getElementById("Title");
-        var Location = document.getElementById("Location");
-        var Position = document.getElementById("Position");
-        var Stipend = document.getElementById("Stipend");
-        var SkillSet = document.getElementById("SkillSet");
-        var Link = document.getElementById("Link");
-        var Details = document.getElementById("Details");
-
-        var SubmitButton = document.getElementById("Submit");
+    </div>
 
 
-        // Insert Function
 
-        function InsertData(){
-          set(ref(db ,  "Listings/" + Title.value),{
-          Institute : Institute.value,
-          Title : Title.value,
-          Location : Location.value,
-          Position : Position.value,
-          Stipend : Stipend.value,
-          SkillSet : SkillSet.value,
-          Link : Link.value,
-          Details : Details.value
-        })
-        .then(()=>{
-          alert("data Stored Successfully");
-        }).catch((error)=>{
-          alert(error);
-        });  }
 
-        // Submitting Functionality
-
-        SubmitButton.addEventListener('click',InsertData);
-        </script>
-
+    <!--Footer-->
     
-  <!--Footer-->
-  <footer id="footer">      
-    <a class=" social-icon fa-brands fa-facebook btn btn-outline-secondary  btn-block" href=" " ></a> 
+    <div class="foot">     
+      <a class="social-icon fa-brands fa-facebook btn btn-outline-light btn-block" href=" "></a> 
+  
+      <a class="social-icon fa-brands fa-twitter btn btn-outline-light btn-block" href=" "> </a>
 
-    <a class="social-icon fa-brands fa-twitter btn btn-outline-secondary btn-block" href=" "> </a>
+      <a class="social-icon fa-brands fa-instagram btn btn-outline-light btn-block" href=" "></a>
+      
+      <a class="social-icon fa-solid fa-envelope btn btn-outline-light btn-block" href=" "></a>
 
-    <a class="social-icon fa-brands fa-instagram btn btn-outline-secondary btn-block" href=" "></a>
-    
-    <a class="social-icon fa-solid fa-envelope btn btn-outline-secondary btn-block" href=" "></a>
-
-    <p>© SERI 2022. All rights are reserved.</p>
-</footer>
+      <p class="rights">© SERI 2022. All rights are reserved.</p>
+    </div>
 
 </body>
 </html>
