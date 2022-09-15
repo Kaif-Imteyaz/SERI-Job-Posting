@@ -1,14 +1,14 @@
 function disableSubmit() {
-  document.getElementById("submit").disabled = true;
+  document.getElementById("Submit").disabled = true;
  }
 
   function activateButton(element) {
 
       if(element.checked) {
-        document.getElementById("submit").disabled = false;
+        document.getElementById("Submit").disabled = false;
        }
        else  {
-        document.getElementById("submit").disabled = true;
+        document.getElementById("Submit").disabled = true;
       }
 
   }
