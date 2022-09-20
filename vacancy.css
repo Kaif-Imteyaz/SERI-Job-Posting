@@ -14,8 +14,9 @@
 
 /*Body*/
 
+
 body{
-  background-image: linear-gradient(to bottom, #E4DCCF, rgba(198, 222, 241, 0.5));
+  background-image: linear-gradient(to bottom, #dfcca8, rgba(198, 222, 241, 0.5));
   background-repeat: no-repeat;
   background-attachment: fixed;  
   
@@ -25,6 +26,7 @@ body{
 
 /*h2*/
 h2{
+  padding: 2px;
   text-align: center;
 }
 
@@ -37,8 +39,8 @@ h2{
 /*form(element) */
 
 #vacancy{
-
-    border: 1px;
+  padding: 8px;
+  border: 1px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -47,12 +49,14 @@ h2{
 /*alignment */
 
 label{
-  padding-left: 20%;
+  padding-top: 2px;
+  padding-left: 25%;
 }
 /*Input ele*/
 input{
-  margin-left: 20%;
+  margin-left: 25%;
   width: 50%;
+  margin-bottom: 10px;
 }
 
 
@@ -63,28 +67,21 @@ input[type="radio"]{
 
 /*Project details*/
 b {
-margin-left: 20%;
+margin-left: 25%;
 }
 em{
-  margin-left: 20%;
+  margin-left: 25%;
 }
-#pDetails{
-  margin-left: 20%;
+#Details{
+  margin-left: 25%;
 }
 
-#Submit{
-  margin-left: 20% ;
+#submit{
+  margin-left: 25% ;
+  margin-top: 15px;
   width: 50%;
 }
 
-
-
-
-/*Terms*/
-#terms{
-  display: inline-block;
-  width: 5%;
-}
 
 
 /*Footer*/
@@ -102,7 +99,8 @@ em{
   margin: 20px;
   color: white;
   font-family: Roman;
-}.boxes{
+}
+.boxes{
   border: 5px solid white;
   width: 1000px;
   /* height: 200px; */
