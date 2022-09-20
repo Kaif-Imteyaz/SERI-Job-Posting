@@ -85,147 +85,80 @@
 
 <!--Form -->
 
-<div class="row" >
 
-<div class="head">
-  
-  <h2>You are one step away from hiring</h2>
+  <div class="row" >
 
+<div class="col-lg-1 side-info">
+ 
 </div>
 
-
-  <div id="vacancy-form" class="autocomplete col-lg-12">
-     <form id="vacancy" method="get" action="">    
-
-      <p>
-      
-        <strong>Institute</strong>
+  <div id="vacancy-form" class="col-lg-10">
+    <h2>Please fill out this form</h2>
+  <form id="vacancy" method="get" action="">    
+    
+  
+    <label>
+      <strong>Institute</strong>  
+    </label> 
+    <br>
+    <input type="text" name="institute" id="institute"  placeholder="Name of your institute" required>    
+    <br> 
+   
+    <label><strong>Institute link</strong>   </label> 
+    <br>
+    <input type="text" name="instituteLink" id="instituteLink" placeholder="Enter link of institute(if any)" >    
+    <br>
+    
+    <label>
+        <strong>Title</strong>  
+      </label> 
       <br>
-      <input type="text" name="Institute" id="Institute" 
-      placeholder="Select Institute" required>    
-       <br>
-    </p>
+      <input type="text" name="title" id="title" placeholder="Enter title" required>    
+      <br>  
       
-     <p>
-        <strong>Title</strong>
+
+      <label><strong>Position</strong>   </label> 
       <br>
-        <input type="text" id="Title" name="title" placeholder="Title" required>
-         <br>
-        </p> 
+      <input type="radio" name="position" id="position" required >    
+      Full Time
+      <input type="radio" name="position" id="position" required >    
+      Part Time
+      <br>
 
-      <p>
-        
-          <strong>Location</strong>
+      <label><strong>Stipend</strong>   </label> 
+      <br>
+      <input type="text" name="stipend" id="stipend" placeholder="Stipend" required >    
+      <br>
 
-        <br>
-        <input type="text" id="Location" name="location" 
-        placeholder="Enter location" required>
-         <br>
-        </p> 
+      <label><strong>Skill-Set</strong>   </label> 
+      <br>
+      <input type="text" name="skillSet" id="skillSet" placeholder="Skill-Set" required >    
+      <br>
 
-        <p>
-          
-            <strong>Position</strong>
+
+        <b>Project</b>
+        <br />
+        <em>Please provide a detailed information about your project</em>
+        <br />
+
+        <textarea
+          name="project"
+          id="pDetails"
+          cols="45"
+          rows="5"
+          placeholder="Enter your text here"
+          required maxlength="120"
+        >
+      </textarea>
   
-          <br>
-          <input type="radio" id="Position" name="position" value="Full Time RA" 
-          required>
-          Full Time RA
-          <input type="radio" id="Position" name="position" value="Intern" 
-          required>
-          Intern  
-          <br>
-        </p>
 
-          
-       <p>
-        
-          <strong>Stipend</strong>
-
-        <br>
-        <input type="text" id="Stipend" name="Stipend" placeholder="Stripend" required>
-        <br>
-      </p>
-
-      <p>
-        
-          <strong>Skill Set</strong>
-
-        <br>
-        <input type="text" id="SkillSet" name="Skill" placeholder="Skill-set" required> 
-        <br>
-       </p>
-
-         <p>
-          
-            <strong>Institute link</strong>
-  
-          <br>
-         <input type="url" id="Link"   placeholder="If institute link is available" required> 
-          <br>
-        </p>
-     
-     
-        <p>
-          
-            <strong>Project</strong>
-  
-          <br>
-            <em>Please provide a detailed information about your project</em>
-          </label>
-          <br>
-          <textarea name="project" id="Details" cols="45" rows="5"
-           placeholder="Enter your text here"></textarea>
-          <br>
-         </p>
-
-         
-         <em id="condition"> *All fields are mandatory </em>   
-         <br>  
-              
-         <!--Submit button-->
-         
-        
-         <input type="checkbox" name="terms" id="terms"
-       onchange="activateButton(this)" required>  
-        By clicking here, I state that I have  read and understood the <br>
-        <a href="#" id="tNc">terms and conditions.</a>
-       <br><br>
-       
-         <input type="submit" name="formSubmit" id="Submit" 
+         <input type="submit" name="vacancySubmit" id="submit" 
          class="create btn btn-outline-secondary active" 
-      role="button" aria-pressed="true" value="SUBMIT"/>  
+      role="button" aria-pressed="true" value="SUBMIT"/> 
       <br><br> 
-      </form>
-    </div>
-
-
-
-    <!-- Social links -->
-    <!-- <div class="social col-lg-4" >
-      Drop your socials to let others know about you.
-     <br>
-     <br>
-      <form>
-        <p>
-          E-mail address:
-        <input type="email" placeholder="E-mail Address" required >
-        </p>
-        <p>
-          Twitter: <br>
-        <input type="text" placeholder="User_name/url">
-      </p>
-
-        <p>
-          LinkedIn: <br>
-        <input type="text" placeholder="Linkedin_UserName/url">
-      </p> -->
-      </form>
-
-    </div>
-
-
-    </div>
+  </form>     
+  </div>
+</div>
 
     <!-- Firebase confif -->
   <script type="module">
