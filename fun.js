@@ -22,27 +22,22 @@ const db = getDatabase();
 var DataSnapshot;
 var data = [];
 
-
 function getDataSnapShot() {
     const dbref = ref(db);
-
+    
 
     get(child(dbref, '/Listings')).then((snapshot) => {
         if (snapshot != null) {
             DataSnapshot = snapshot.val();
             console.log(DataSnapshot);
-            snapshot.forEach(doc => { data.push(doc) });
-
-            console.log(DataSnapshot);
-            // console.log(DataSnapshot.tataya.Link);
+            for(var i in DataSnapshot){
+              data.push(i);
+            }
             console.log(data);
-            console.log("dataIsHere");
-            
-        
 
             var dynamic = document.querySelector('.container');  
-for (var i = 0; i < data.length; i++) {
-    var dataToShow = DataSnapshot[data[i]['key']];
+for (var i in data) {
+    var dataToShow = DataSnapshot[data[i]];
     
   var fetch = document.querySelector('.container').innerHTML;  
   dynamic.innerHTML = `<div id="cards${i}" class="boxes">
@@ -52,10 +47,6 @@ for (var i = 0; i < data.length; i++) {
         <label>Location : ${dataToShow.Location}</label><br>
         <label>Position : ${dataToShow.Position}</label><br>
         <label>SkillSet : ${dataToShow.SkillSet}</label><br>
-        
-
-
-
         <a class="showmore" href="#">ReadMore</a>
       </div>
     </div>` + fetch ; 

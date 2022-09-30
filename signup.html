@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-
+    
+    
     
     <!--Bootstrap-css-->
     <link
@@ -34,13 +36,9 @@
      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
      crossorigin="anonymous"
    ></script>
-
-   <script
-    src="/SignUp.js">
-  </script>
-
+   
 </head>
-<body onload="disableSubmit()">
+<body>
   <section id="nav">
     <div class="container-fluid">
       <!-- Nav Bar -->
@@ -93,54 +91,52 @@
 </div>
 
   <div id="signUp-form" class="col-lg-7">
-  <form id="signUp" method="get" action="">    
+  <form id="signUp" method="get" action="register()">    
       
     <label>
       <strong>User Name</strong>  
     </label> 
     <br>
-    <input type="text" name="Uname" id="Uname"  placeholder="Enter your full name" required>    
+    <input type="text" name="Uname" id="Username"  placeholder="Enter your full name" required>    
     <br>    
     
     <label>
         <strong>E-mail</strong>  
       </label> 
       <br>
-      <input type="email" name="email" id="email" placeholder="E-mail" required>    
+      <input type="email" name="email" id="Email" placeholder="E-mail" required>    
       <br>  
       
       <label><strong>Institution</strong>   </label> 
       <br>
-      <input type="search" name="" id="Pass" placeholder="Institution" required>    
+      <input type="search" name="" id="Institution" placeholder="Institution" required>    
       <br>
       
       <label><strong>Designation</strong>   </label> 
       <br>
-      <input type="text" name="designation" id="designation" placeholder="Designation" required >    
+      <input type="text" name="designation" id="Designation" placeholder="Designation" required >    
       <br>
 
       <label><strong>Create Password </strong>   </label> 
       <br>
-      <input type="Password" name="Password" id="Pass" placeholder="Create Password" required>    
+      <input type="Password" name="Password" id="Password" placeholder="Create Password" required>    
       <br>
 
-      <label><strong>Re-enter Password </strong>   </label> 
-      <br>
-      <input type="Password" name="Password" id="Pass" placeholder="Re-enter Password" required>    
-      <br>
-
-      <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  
+      <input type="checkbox" name="terms" id="terms">  
         By clicking here, I state that I have <br> read and understood the  <br>
         <a href="#">terms and conditions.</a>
        <br><br>
        
-         <input type="submit" name="CreateAccount" id="submit" 
+         <input type="submit" name="CreateAccount" id="Submit" 
          class="create btn btn-outline-secondary active" 
-      role="button" aria-pressed="true" value="Create Account"/> 
+      role="button" onclick="register()" aria-pressed="true" value="Create Account"/> 
+      <script type="module" src="signup.js"></script>
       <br><br> 
   </form>     
   </div>
 </div>
+
+
 
 </body>
 </html>

@@ -113,37 +113,44 @@
     <br>
     <input type="text" name="institute" id="Institute"  placeholder="Name of your institute" required>    
     <br> 
-   
-    <label><strong>Institute link</strong>   </label> 
-    <br>
-    <input type="text" name="instituteLink" id="Link" placeholder="Enter link of institute(if any)" >    
-    <br>
     
     <label>
         <strong>Title</strong>  
       </label> 
       <br>
-      <input type="text" name="title" id="title" placeholder="Enter title" required>    
+      <input type="text" name="title" id="Title" placeholder="Enter title" required>    
       <br>  
       
 
       <label><strong>Position</strong>   </label> 
       <br>
-      <input type="radio" name="position" id="position" required >    
+      <input type="radio" name="position" id="Position" required >    
       Full Time
-      <input type="radio" name="position" id="position" required >    
+      <input type="radio" name="position" id="Position" required >    
       Part Time
       <br>
 
       <label><strong>Stipend</strong>   </label> 
       <br>
-      <input type="text" name="stipend" id="stipend" placeholder="Stipend" required >    
+      <input type="text" name="stipend" id="Stipend" placeholder="Stipend" required >    
       <br>
+
+      <label><strong>Location</strong></label>
+
+        <br>
+        <input type="text" id="Location" name="location" 
+        placeholder="Enter location" required>
+         <br>
 
       <label><strong>Skill-Set</strong>   </label> 
       <br>
-      <input type="text" name="skillSet" id="skillSet" placeholder="Skill-Set" required >    
+      <input type="text" name="skillSet" id="SkillSet" placeholder="Skill-Set" required >    
       <br>
+
+      <label><strong>Institute link</strong>   </label> 
+    <br>
+    <input type="text" name="instituteLink" id="Link" placeholder="Enter link of institute(if any)" >    
+    <br>
 
 
         <b>Project</b>
@@ -203,8 +210,11 @@
         var SkillSet = document.getElementById("SkillSet");
         var Link = document.getElementById("Link");
         var Details = document.getElementById("Details");
+        var DatePosted = Date();
 
         var SubmitButton = document.getElementById("Submit");
+
+        
 
 
         // Insert Function
@@ -218,9 +228,12 @@
           Stipend : Stipend.value,
           SkillSet : SkillSet.value,
           Link : Link.value,
-          Details : Details.value
+          Details : Details.value,
+          Date : DatePosted
+      
         })
         .then(()=>{
+          
           alert("data Stored Successfully");
         }).catch((error)=>{
           alert(error);
